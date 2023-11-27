@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  date: 2023-11-27
+  partner: MyString
+  weight: 9.99
+  participants: 1
+
+two:
+  name: MyString
+  description: MyString
+  date: 2023-11-27
+  partner: MyString
+  weight: 9.99
+  participants: 1

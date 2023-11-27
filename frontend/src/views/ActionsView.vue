@@ -1,5 +1,5 @@
 <script setup>
-import Action from '../components/Action.vue'
+  import Action from '../components/Action.vue'
 </script>
 
 <template>

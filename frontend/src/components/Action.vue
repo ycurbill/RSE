@@ -13,12 +13,11 @@
                         IMG
                     </v-col>
                     <v-col cols="8">
-                        <v-card-title>Collecte de denrées alimentaires</v-card-title>
-                        <v-card-text>Some description</v-card-text>
+                        <v-card-title>{{ name }}</v-card-title>
+                        <v-card-text>{{ description }}</v-card-text>
                         <v-card-actions>
-                            <v-btn color="primary">
-                            Déclarer
-                            </v-btn>
+                            <v-btn @click="dialog = true">Déclarer</v-btn>
+                            <PopupAction v-model="dialog" @close="dialog = false" :name="name" :description="description"/> 
                         </v-card-actions>
                     </v-col>
                 </v-row>
@@ -27,3 +26,18 @@
     </v-col>
   </v-row>
 </template>
+
+<script>
+    import PopupAction from './PopupAction.vue'
+
+    export default {
+        components: {
+            PopupAction
+        },
+        data: () => ({
+            dialog: false,
+            name: "Collecte de denrées alimentaires",
+            description: "description",
+        })
+    }
+</script>
