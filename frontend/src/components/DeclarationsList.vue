@@ -1,18 +1,19 @@
 <template>
     <div>
+        <!-- List of actions done -->
         <v-list>
-            <v-list-item v-for="(action, index) in actions" :key="action.id" style="padding: 10px; margin: 10px; border: 1px solid red;">
+            <v-list-item v-for="(action, index) in actions" :key="action.id" style="padding: 10px; margin: 10px;">
                 <v-list-item-title>{{ action.name }}</v-list-item-title>
                 <v-list-item-subtitle>{{ action.description }}</v-list-item-subtitle>
                     <v-btn @click="dialogs[index] = true" elevation="5">Voir les indicateurs</v-btn>
                     <PopupDeclarations v-model="dialogs[index]" @close="dialogs[index] = false" :name="action.name" :description="action.description" :indicators="action.indicators" />
             </v-list-item>
         </v-list>
+        <!-- Possibility to ask for new indicators -->
         <v-card-text>
             <p>Nouvel indicateur</p>
             <v-text-field v-model="name" label='Intitulé (ex: "poids", "participants")'></v-text-field>
             <v-text-field v-model="precision" label='Précision (ex: "kg", "€", "nombre")'></v-text-field>
-            <!-- <v-text-field v-model="value" label="Valeur"></v-text-field> -->
             <v-btn color="primary" @click="addData">Add</v-btn>
         </v-card-text>
     </div>
@@ -31,7 +32,6 @@
                 actions: [],
                 name: null,
                 precision: null,
-                // value: null,
         }),
         created() {
             axios.get('http://localhost:3000/get-actions')

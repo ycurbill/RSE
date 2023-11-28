@@ -3,20 +3,21 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
+  <!-- Navigation -->
   <v-app>
     <v-app-bar app>
       <router-link to="/">
-        <v-btn color="primary">Actions</v-btn>
+        <v-btn color="green">Actions</v-btn>
       </router-link>
       <router-link to="/about">
-        <v-btn color="primary">Declarations</v-btn>
+        <v-btn color="green">Declarations</v-btn>
       </router-link>
    </v-app-bar>
-
+  <!-- Page -->
     <v-main>
       <v-container fill-height fluid>
-        <v-row align="center" justify="center" style="border: 1px solid blue;">
-          <v-col style="border: 1px solid red;">
+        <v-row align="center" justify="center">
+          <v-col>
             <RouterView />
           </v-col>
         </v-row>
