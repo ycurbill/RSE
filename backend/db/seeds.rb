@@ -10,3 +10,4 @@
 
 Indicator.destroy_all
 Action.destroy_all
+IndicatorsList.destroy_all
