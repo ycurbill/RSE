@@ -38,6 +38,16 @@ bundle install
 ```
 9. 
 ```sh
+rails db:migrate
+```
+
+(Optional: To empty database)
+```sh
+rails db:seed
+```
+
+9. 
+```sh
 rails server -p 3000
 ```
 (If port 3000 is already in use, close the process where it is in use and run again this command)
