@@ -46,7 +46,7 @@ rails db:migrate
 rails db:seed
 ```
 
-9. 
+10. 
 ```sh
 rails server -p 3000
 ```
